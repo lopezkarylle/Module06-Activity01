@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <title>M6 - Activity 01</title>
+  </head>
+  <body>
+    <div>
+    <!-- string -->
+        <div>
+            <h1>AUF Student Information </h1>
+            <label>Enter your name:</label>
+            <input type="text" ng-model="firstName" placeholder="Enter your first name here">
+            <input type="text" ng-model="lastName" placeholder="Enter your last name here">
+            <h1 ng-bind="firstName + ' ' + lastName"></h1>
+        </div>
+
+    <!-- string -->
+        <div ng-app ng-init="courseInfo={Course:'BSIT', yrLevel:'3rd Year'}">
+            <h3>Course Information: {{courseInfo.Course + " - " + courseInfo.yrLevel}}</h3>
+
+    <!-- predetermined values -->
+    <div ng-app ng-init = "student_id=201068435">
+        <h3>Your student number is: {{student_id}}</h3>
+        <hr>
+
+    <!-- number & filter -->
+    <div ng-app>
+        <h1>Tuition fee A.Y 2021 - 2022</h1>
+        <label>First Semester:</label>
+        <input type="number" ng-model="val1" placeholder="Enter amount">
+        <label>Second Semester:</label>
+        <input type="number" ng-model="val2" placeholder="Enter amount">
+
+    <h2>The total amount of tuition fee for A.Y 2021-2022 is: {{val1 + val2 | currency:"₱" }}</h2>
+    <hr>
+
+
+
+
+  </body>
+</html>
